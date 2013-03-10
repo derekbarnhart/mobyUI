@@ -1,0 +1,33 @@
+<div modal="widget.admin.state" close="close(widget)" options="opts">
+    <div class="modal-header">
+        <h4>Edit Mode</h4>
+    </div>
+ 
+    <div class="modal-body">
+    	
+    	<div class="form-inline">
+	    	<label>Title
+	    		<input type="text" ng-model="widget.data.title"></input>
+	    </label>
+	    	
+	    	<label class="checkbox">
+	      <input type="checkbox" ng-model="widget.data.required"> This field is required
+	    </label>
+    </div>
+    <div ng-include="widget.admin.template"></div>
+    <label class="checkbox">
+      <input type="checkbox" ng-model="widget.data.validate" > Validate this field
+    </label>
+    	<div ng-show ="widget.data.validate" ng-include="'views/templates/validation.html'"></div>
+    
+   
+    	
+    	
+    </div> <!--ng-bind-html-unsafe="widget.admin.markup"></div> -->
+    
+    <div class="modal-footer">				        	
+        <button class="btn cancel" ng-click="close(widget)">Cancel</button>
+    		<button class="btn btn-warning cancel" ng-click="updateItem(widget)">Save</button>
+    </div>
+ 
+ </div>

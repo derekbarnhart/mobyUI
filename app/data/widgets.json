@@ -1,0 +1,10 @@
+{
+	"textbox":{
+        "html": "<label for=\"text-basic\">Text input:</label><input name=\"text-basic\" id=\"text-basic\" value=\"\" type=\"text\">",   
+        "admin": "<select><option>Text</option><option>Phone</option><option>Email</option></select>"
+        },
+    "combo":{
+        "html": "<label for=\"select-choice-1\" class=\"select\">Select, native menu</label><select name=\"select-choice-1\" id=\"select-choice-1\"><option value=\"standard\">Standard: 7 day</option><option value=\"rush\">Rush: 3 days</option><option value=\"express\">Express: next day</option><option value=\"overnight\">Overnight</option></select>",   
+        "admin": "<button>Add Option</button>"       
+        }
+}

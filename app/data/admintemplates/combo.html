@@ -1,0 +1,7 @@
+<h3>Combo box for :{{widget.data.title}}</h3>
+<button ng-click="widget.data.options.push({name:'Option',value:'options'})">Add Option</button>
+<div>
+	<div ng-repeat="option in widget.data.options">
+		<input type="text" ng-model="option.name"></input><input type="text" ng-model="option.value"></input>
+	</div>
+</div>

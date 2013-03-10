@@ -1,0 +1,84 @@
+<div class = "row">
+	 
+<div ng-include src="'data/widgetMarkup.html'"></div>
+<div ng-include src="'data/scriptMarkup.html'"></div>
+	 
+	 <div class = "span12">
+	 	<div>
+			<select ui-select2 ng-model="framework" ng-change="onFrameworkChange()" data-placeholder="-- Select Framework --" style="width:200px">
+		    		<option></option>
+		    		<option ng-repeat="item in frameworks" value="{{item.template}}" >{{item.name}}</option>
+		  	</select>	
+		</div>
+	 </div> 
+	
+	 <div class = "span6"> 
+		<div>
+			<select ui-select2="{placeholder: 'Widget Type',allowClear: true}" ng-model="selectedWidgetType"  style="width:200px">
+		    		<option></option>
+		    		<option ng-repeat="dataType in dataTypes" value="{{dataType.code}}" >{{dataType.name}}</option>
+		  	</select>	
+	  		 <button class="btn btn-primary addButton" type="button" ng-click="addItem();">Add</button>
+		</div>	
+		<ul ui:sortable="{update:update}" ng-model="widgets">
+		<li ng-repeat="widget in widgets">
+			<div class="well well-small element" ><!--background:{{widget.color}};-->
+			 <div class="row">	 		 
+				 	<div class= "span6"> 		
+				 		<h4>{{widget.data.title}}</h4>				 		
+				 			<button class="btn pull-right" ng-click="removeItem($index)"><i class="icon-remove-sign"></i>Remove</button>
+    							<button class="btn pull-right" ng-click="open(widget)"><i class="icon-wrench"></i>Edit</button>
+					    <div ng-include="'views/templates/itemEditModal.html'"></div>
+				 	</div>		 			   
+			 </div>
+	 	</div>	
+		</li>
+		</ul>
+		<div id="content" style="visibility:hidden;" ng-bind-html-unsafe="formHtml"></div>		
+	</div>
+				
+	 <div class = "span6">
+		<!-- <textarea>{{json()}}</textarea> -->
+			 <!-- Maybe use hammer.js to track touch movements -->
+		<select ui-select2 ng-model="theme" ng-change="onThemeChange()" data-placeholder="-- Pick a theme --" style="width:200px">
+		    		<option></option>
+		    		<option ng-repeat="item in themes" value="{{item.path}}" >{{item.name}}</option>
+		</select>
+		
+		<div><iframe id="1" style="width: 320px; height: 481px; border: 0;" src="mobileSimulator.html"></iframe></div>
+		<textarea id="textInput"></textarea>	
+		<button onclick="put()">Add</button>
+	</div>
+	
+	<script>
+		var demoDevice = document.getElementById('1').contentWindow;
+		function changeTitle(title){
+			document.getElementById('1').contentWindow.jQuery('#pageTitle').html(title);
+		}
+		
+		function changeContent(content){
+			document.getElementById('1').contentWindow.jQuery('#content').html(content);
+			document.getElementById('1').contentWindow.jQuery('#content').trigger( "create" );
+		
+		}
+		
+		function changeCss(content){
+			document.getElementById('1').contentWindow.jQuery('#iframe-css').attr('href',content);
+			
+		//<style id="iframe-css" type="text/css"></style>
+		
+		}
+		
+		function getHtml(){		
+			var html = $('#1').contents().find("html").html();
+			console.log(html);
+		}
+		
+		function put(){
+			var html = $('#textInput').html();
+			demoDevice.dstyle.add('Theme2.css','css');
+		}
+		
+		
+	</script>
+</div>

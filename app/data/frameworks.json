@@ -1,0 +1,5 @@
+[
+	{"name":"jQuery 1.3.0", "value":"jquery1_3_0", "template":"mobileSimulator.html"},
+	{"name":"Bootstrap", "value":"bootstrap2_3_1", "template":"bootstrap.html"}
+]
+

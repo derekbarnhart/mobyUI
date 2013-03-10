@@ -1,0 +1,48 @@
+<script id="_textbox" type="text/x-handlebars-template">
+  <div data-role="fieldcontain">
+  {{#if required}}
+  <em>* </em>
+  {{/if}}
+  
+  {{#if label}}
+  <label>{{title}}<label>
+  {{/if}}
+  
+  <input id={{elementId}} type="text" {{#if placeholder}}placeholder="{{title}}"{{/if}} {{#if required}}required{{/if}}></input>
+</div>
+</script>
+
+
+<script id="_combo" type="text/x-handlebars-template">
+  {{#if label}}
+  <p>{{title}}<p>
+  {{/if}}
+  <select>
+  	{{#if options}}
+  	 	{{#each options}}
+  			<option>{{this.name}}</option>
+  		{{/each}}
+  	{{else}}
+  	<option>Option 1</option>
+  	<option>Option 2</option>
+  	{{/if}}
+  	</select>
+</script>
+
+<script id="_datepicker" type="text/x-handlebars-template">
+  datepicker
+  {{#if label}}
+  <label>{{title}}<label>
+  {{/if}}
+  
+  <input type="text" {{#if placeholder}}placeholder="{{title}}"{{/if}} {{#if required}}required{{/if}}></input>
+</script>
+
+<script id="_timepicker" type="text/x-handlebars-template">
+  timepicker
+  {{#if label}}
+  <label>{{title}}<label>
+  {{/if}}
+  
+  <input type="text" {{#if placeholder}}placeholder="{{title}}"{{/if}} {{#if required}}required{{/if}}></input>
+</script>

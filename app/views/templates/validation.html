@@ -1,0 +1,12 @@
+
+<label>Select an item that the content of this input must match</label>
+<select ui-select2="{placeholder: 'Match item',allowClear: true}" ng-model="selectedWidgetType"  style="width:200px">
+		    		<option></option>
+		    		<option ng-repeat="matchitem in widgets" value="{{matchitem.data.title}}" >{{matchitem.data.title}}</option>
+		 </select> 
+
+<div ng-show="widget.data.maxMin" ng-include='views/templates/valMax.html'>
+	
+	
+</div>
+

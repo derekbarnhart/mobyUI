@@ -1,0 +1,17 @@
+[
+
+	{"name":"Age", "category":"Name", "ui":"textbox", "type":"int", "code":"1001"},
+	{"name":"Date", "category":"Name", "ui":"datepicker", "type":"date", "code":"1002"},
+	{"name":"Time", "category":"Name", "ui":"timepicker", "type":"time", "code":"1003"},
+    {"name":"Phone", "category":"Name", "ui":"combo", "type":"phone", "code":"1004"},
+	{"name":"Email", "category":"Name", "ui":"textbox", "type":"email", "code":"1005"},
+	{"name":"Url", "category":"Name", "ui":"textbox", "type":"url", "code":"1006"},
+	{"name":"Credit Card", "category":"Name", "ui":"textbox", "type":"creditcard", "code":"1007"},
+    {"name":"First Name", "category":"Name", "ui":"textbox", "type":"string", "code":"1008"},
+    {"name":"Middle Name", "category":"Name", "ui":"textbox", "type":"string", "code":"1009"},
+    {"name":"Last Name", "category":"Name", "ui":"textbox","type":"string", "code":"1010"},
+    {"name":"Salutation", "category":"Name", "ui":"combo", "type":"string", "code":"1011"},
+	{"name":"Maiden Name", "category":"Name", "ui":"textbox", "type":"string", "code":"1012"}
+
+
+]

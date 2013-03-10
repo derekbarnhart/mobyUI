@@ -1,0 +1,20 @@
+  ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }
+  li {}
+  div .accordion {margin-top: 0px; margin-bottom: 0px; }
+  .element-old {background: #8fafff;border:5px solid #3b3b3b; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px;margin-bottom:5px; margin-top:5px}
+  
+  .element h3,h2,h1,h4 {display:inline;}
+  .element a {float:right; display:inline;padding-right:0px;padding-top:-30px;}
+  
+  div .demo {
+  	background: #fff;
+  	border:10px solid #3b3b3b; 
+  	border-radius:10px; 
+  	-moz-border-radius:10px; 
+  	-webkit-border-radius:10px;
+  	margin-bottom:5px; 
+  	margin-top:5px;
+  	overflow:scroll;
+  	}
+
+  .main-container { margin-top:45px; }
